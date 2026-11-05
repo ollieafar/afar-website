@@ -371,7 +371,7 @@ body[data-acc="fill"] .D .blue{background:linear-gradient(100deg,#1f48ff,#8a5cf6
 
 /* designed service graphics */
 .gfx{position:absolute;inset:0;container-type:size;overflow:hidden;color:#fff;font-family:var(--body)}
-.gfx .lbl{display:none}
+.gfx .lbl{display:none}.gx-roster{position:absolute;inset:0;display:grid;grid-template-columns:repeat(3,1fr);gap:6px;padding:6px;background:var(--ink)}.gx-roster span{background-size:cover;background-position:center 30%;border-radius:6px;}.gx-roster b{position:absolute;left:14px;bottom:14px;font:800 clamp(18px,8cqw,34px)/1 var(--disp);text-transform:uppercase;background:var(--blue,#2347ff);padding:8px 12px;border-radius:6px}
 .gx-frames{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;gap:4cqw}
 .gx-frames span{width:18cqw;aspect-ratio:9/16;border-radius:2.4cqw;background:rgba(255,255,255,.22);border:1.5px solid rgba(255,255,255,.6);position:relative;backdrop-filter:blur(4px);animation:fbob 5s ease-in-out infinite}
 .gx-frames span:nth-child(2){width:22cqw;background:rgba(255,255,255,.35);animation-delay:.6s}
@@ -747,24 +747,6 @@ body[data-acc="none"] .D .pic{display:none}
   </div>
   
 </div>
-<div class="page" data-page="t-tamz" hidden>
-  <div class="wrap">
-    <a class="back" href="#talent">← All talent</a>
-    <div class="prof">
-      <div class="ph g5 hov"><span class="bars"><i></i><i></i><i></i></span><span class="lbl">Photo / video</span></div>
-      <div>
-        <p class="tag live"><b></b>Digital Creator</p>
-        <h1 class="D" style="margin-top:14px">Tamz<br><span class="blue">Jade</span></h1>
-        <p class="pblurb">Tamz is an Aussie mum who has called Bali home for the past three years. On TikTok she&#x27;s known for funny storytimes and everyday chaos. On Bail to Bali she shares practical tips for tourists and expats, plus her very random Indo shopping finds.</p>
-        <div class="handles"><span><b>108K</b><small>TikTok</small></span><span><b>5.6M</b><small>TikTok likes</small></span></div><p class="tag" style="margin-top:8px;font-size:10px">Audience as of Nov 2026</p>
-        <p class="lh2">Niches</p><div class="niches"><span>Comedy &amp; Storytimes</span><span>Bali</span><span>Expat Life</span><span>Parenting</span></div>
-        <p class="lh2">Find Tamz</p><div class="socs"><a class="soc" href="https://www.tiktok.com/@tamzjade" target="_blank" rel="noopener"><small>TikTok</small><b>@tamzjade</b><i>↗</i></a><a class="soc" href="https://www.instagram.com/tamzjadeofficial/" target="_blank" rel="noopener"><small>Instagram</small><b>@tamzjadeofficial</b><i>↗</i></a><a class="soc" href="https://www.instagram.com/bailingtobali/" target="_blank" rel="noopener"><small>Instagram</small><b>@bailingtobali</b><i>↗</i></a><a class="soc" href="https://www.tiktok.com/@bailingtobali" target="_blank" rel="noopener"><small>TikTok</small><b>@bailingtobali</b><i>↗</i></a></div>
-        <div class="acts" style="margin-top:26px"><a class="pill b" href="#contact">Enquire about Tamz →</a><a class="pill g" href="#contact">Request Media Kit →</a></div>
-      </div>
-    </div>
-  </div>
-  
-</div>
 <div class="page" data-page="t-jacki" hidden>
   <div class="wrap">
     <a class="back" href="#talent">← All talent</a>
@@ -805,7 +787,7 @@ body[data-acc="none"] .D .pic{display:none}
   <div class="wrap">
     <a class="back" href="#talent">← All talent</a>
     <div class="prof">
-      <div class="ph g2 hov"><span class="bars"><i></i><i></i><i></i></span><span class="lbl">Photo / video</span></div>
+      <div class="ph g2 hov"><img class="tp" src="img/talent/isabella.jpg" alt="" style="object-position:center 25%"></div>
       <div>
         <p class="tag live"><b></b>Digital Creator</p>
         <h1 class="D" style="margin-top:14px">Isabella<br><span class="blue">Duric</span></h1>
@@ -954,9 +936,9 @@ document.querySelectorAll('.logo-slot').forEach(s=>s.innerHTML=LOGO);
 const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 /* ---- roster data (one place to edit) ---- */
-const TALENT=[{"n": "Sophie Lauren Mills", "t": "Digital Creator", "k": "creator", "g": "g1", "link": "#t-sophie", "img": "sophie", "niche": "Love Island AU \u00b7 Fashion & Beauty"},{"n": "Maddison Lambert", "t": "Digital Creator", "k": "creator", "g": "g2", "link": "#t-maddison", "img": "maddison", "niche": "Travel \u00b7 Travel Hacks"},{"n": "Ondreaz Lopez", "t": "Digital Creator", "k": "creator", "g": "g4", "link": "#t-ondreaz", "img": "ondreaz", "niche": "Entertainment \u00b7 Hybrid Training"},{"n": "Tamz Jade", "t": "Digital Creator", "k": "creator", "g": "g5", "link": "#t-tamz", "niche": "Comedy & Storytimes \u00b7 Bali"},{"n": "Jetsetting Jacki", "t": "Digital Creator", "k": "creator", "g": "g3", "link": "#t-jacki", "img": "jacki", "niche": "Travel \u00b7 Southeast Asia"},{"n": "Montana On Tour", "t": "Digital Creator", "k": "creator", "g": "g6", "link": "#t-montana", "img": "montana", "niche": "Travel \u00b7 Food"},{"n": "Isabella Duric", "t": "Digital Creator", "k": "creator", "g": "g2", "link": "#t-isabella", "niche": "Fashion \u00b7 Lifestyle"},{"n": "Bali Buddies", "t": "Media Brand", "k": "media", "g": "g4", "link": "#t-balibuddies", "img": "balibuddies", "niche": "Bali \u00b7 Travel"}];
+const TALENT=[{"n": "Sophie Lauren Mills", "t": "Digital Creator", "k": "creator", "g": "g1", "link": "#t-sophie", "img": "sophie", "niche": "Love Island AU \u00b7 Fashion & Beauty"},{"n": "Maddison Lambert", "t": "Digital Creator", "k": "creator", "g": "g2", "link": "#t-maddison", "img": "maddison", "niche": "Travel \u00b7 Travel Hacks"},{"n": "Ondreaz Lopez", "t": "Digital Creator", "k": "creator", "g": "g4", "link": "#t-ondreaz", "img": "ondreaz", "niche": "Entertainment \u00b7 Hybrid Training"},{"n": "Jetsetting Jacki", "t": "Digital Creator", "k": "creator", "g": "g3", "link": "#t-jacki", "img": "jacki", "niche": "Travel \u00b7 Southeast Asia"},{"n": "Montana On Tour", "t": "Digital Creator", "k": "creator", "g": "g6", "link": "#t-montana", "img": "montana", "niche": "Travel \u00b7 Food"},{"n": "Isabella Duric", "t": "Digital Creator", "k": "creator", "g": "g2", "link": "#t-isabella", "img": "isabella", "niche": "Fashion \u00b7 Lifestyle"},{"n": "Bali Buddies", "t": "Media Brand", "k": "media", "g": "g4", "link": "#t-balibuddies", "img": "balibuddies", "niche": "Bali \u00b7 Travel"}];
 const GROUPS=[['creator','Digital Creators','Creators working across fashion, lifestyle, travel, beauty, culture and more.'],['media','Media Brands','Established media platforms, blogs and digital publications with engaged audiences and strong editorial perspectives.'],['public','Public Figures','Personalities, speakers, founders and public figures working across media, business and culture.']];
-const TPOS={"sophie": "center 30%", "maddison": "center 30%", "ondreaz": "center 35%", "jacki": "center 40%", "montana": "center 30%", "balibuddies": "contain"};const TIMG=(k,n)=>TPOS[k]==='contain'?`<img class="tp fit" src="img/talent/${k}.jpg" alt="${n}" loading="lazy">`:`<img class="tp" src="img/talent/${k}.jpg" alt="${n}" loading="lazy" style="object-position:${TPOS[k]}">`;
+const TPOS={"sophie": "center 30%", "maddison": "center 30%", "ondreaz": "center 35%", "jacki": "center 40%", "montana": "center 30%", "isabella": "center 25%", "balibuddies": "contain"};const TIMG=(k,n)=>TPOS[k]==='contain'?`<img class="tp fit" src="img/talent/${k}.jpg" alt="${n}" loading="lazy">`:`<img class="tp" src="img/talent/${k}.jpg" alt="${n}" loading="lazy" style="object-position:${TPOS[k]}">`;
 const card=(p)=>`<div class="card hov"><a href="${p.link||'#talent'}" data-cur="Profile" class="ph ${p.g}" style="display:block">${p.img?TIMG(p.img,p.n):'<span class="bars"><i></i><i></i><i></i></span><span class="lbl">Photo</span>'}</a><div class="meta"><div><strong>${p.n}</strong><span class="tag">${p.niche}</span></div><a class="arrow" href="${p.link||'#talent'}" aria-label="View ${p.n}">↗</a></div></div>`;
 const join=(t,s)=>`<div class="card join"><a href="#representation" class="ph" data-cur="Apply"><span style="display:grid;justify-items:center;gap:8px"><b>+</b><span class="tag">${t}</span></span></a><div class="meta"><div><strong>Join the roster</strong><span class="tag">${s}</span></div></div></div>`;
 document.getElementById('homeTal').innerHTML=TALENT.map(card).join('');
@@ -1015,7 +997,7 @@ if(gl){const L=gl.getTotalLength();const pt0=q=>gl.getPointAtLength(L*q).x/1200;
 if(!reduce)document.querySelectorAll('.svc').forEach(c=>{let t;c.addEventListener('mouseenter',()=>{const ph=c.querySelector('.ph');t=setInterval(()=>{const h=document.createElement('span');h.className='flike';h.textContent='♥';h.style.setProperty('--x',(Math.random()*40-30)+'px');ph.appendChild(h);setTimeout(()=>h.remove(),1900)},260)});c.addEventListener('mouseleave',()=>clearInterval(t))});
 
 /* ---- designed graphics for service images (talent left as photo slot) ---- */
-const GFX=[null,
+const GFX=['<div class="gx-roster">'+['isabella','maddison','ondreaz','jacki','montana','sophie'].map(k=>`<span style="background-image:url(img/talent/${k}.jpg)"></span>`).join('')+'<b>Our roster</b></div>',
  '<div class="gx-frames"><span><i>@creator</i></span><span><i>@creator</i></span><span><i>@creator</i></span></div>',
  '<div class="gx-x"><span class="c"></span><span class="c"></span><b>Brand<em>×</em>Talent</b></div>',
  '<div class="gx-poster"><span class="rays"></span><svg class="star" viewBox="0 0 100 100"><path fill="#fff" d="M50 0 58 42 100 50 58 58 50 100 42 58 0 50 42 42Z"/></svg><b>Idea<br>→ Moment</b></div>',
